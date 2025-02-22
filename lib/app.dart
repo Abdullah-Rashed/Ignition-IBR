@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ignition/screens/login_screen.dart';
-import 'package:ignition/screens/messenger_screen.dart';
-import 'screens/contact_us_screen.dart';
+import 'package:ignition/course-sections/stateless_practice/login_screen.dart';
+import 'package:ignition/course-sections/stateless_practice/messenger_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ignition/common/constants/constants.dart';
-import 'package:ignition/common/reusable_comps/chat_tile.dart';
-import 'package:ignition/common/reusable_comps/story_circle.dart';
+import 'package:ignition/course-sections/stateless_practice/reusable_comps/chat_tile.dart';
+import 'package:ignition/course-sections/stateless_practice/reusable_comps/story_circle.dart';
 
 class MessengerScreen extends StatelessWidget {
   const MessengerScreen({super.key});
