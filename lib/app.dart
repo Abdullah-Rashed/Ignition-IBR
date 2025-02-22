@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ignition/course-sections/stateful_practice/screens/bmi/bmi_calc_screen.dart';
+import 'package:ignition/course-sections/stateful_practice/screens/bmi/bmi_result_screen.dart';
+import 'package:ignition/course-sections/stateful_practice/screens/my_stateful_screen.dart';
 import 'package:ignition/course-sections/stateless_practice/login_screen.dart';
 import 'package:ignition/course-sections/stateless_practice/messenger_screen.dart';
 
@@ -14,7 +17,12 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.teal,
         useMaterial3: true,
       ),
-      home: MessengerScreen(),
+      home: BmiCalcScreen(),
     );
   }
 }
+
+//? INIT STATE
+//? BUILD STATE
+//? MOUNTED STATE
+//? DISPOSE STATE
