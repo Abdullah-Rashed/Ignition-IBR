@@ -22,6 +22,7 @@ class _BmiResultScreenState extends State<BmiResultScreen> {
   }
 
   //TODO, change the status of the BMI and the status message based on the actual BMI
+
   //? 5 - 17 SHOW Low and Low message;
   //? 18.5 - 25 SHOW NORMAL and Normal message;
   //?  26.5 - 1000000 High NORMAL and High message;
