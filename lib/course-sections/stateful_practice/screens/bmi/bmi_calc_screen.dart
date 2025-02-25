@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:ignition/course-sections/stateful_practice/reusable_components/bmi/bio_container.dart';
-import 'package:ignition/course-sections/stateful_practice/reusable_components/bmi/gender_container.dart';
-import 'package:ignition/course-sections/stateful_practice/screens/bmi/bmi_result_screen.dart';
+import 'package:fluttercourse/course-sections/stateful_practice/reusable_components/bmi/bio_container.dart';
+import 'package:fluttercourse/course-sections/stateful_practice/reusable_components/bmi/gender_container.dart';
+import 'package:fluttercourse/course-sections/stateful_practice/screens/bmi/bmi_result_screen.dart';
 
 class BmiCalcScreen extends StatefulWidget {
   const BmiCalcScreen({super.key});

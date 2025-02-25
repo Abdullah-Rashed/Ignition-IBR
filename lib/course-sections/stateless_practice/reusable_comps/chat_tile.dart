@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:ignition/common/constants/constants.dart';
+import 'package:fluttercourse/common/constants/constants.dart';
 
 class ChatTile extends StatelessWidget {
   final String imgPath;

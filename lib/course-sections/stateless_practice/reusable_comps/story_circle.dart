@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ignition/common/constants/constants.dart';
+import 'package:fluttercourse/common/constants/constants.dart';
 
 class StoryCircle extends StatelessWidget {
   final String imgPath;

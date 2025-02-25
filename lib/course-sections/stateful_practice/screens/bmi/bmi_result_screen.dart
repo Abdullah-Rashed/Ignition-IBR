@@ -16,9 +16,30 @@ class BmiResultScreen extends StatefulWidget {
 
 class _BmiResultScreenState extends State<BmiResultScreen> {
   late double bmi;
+  late String bmiStatus;
+  late String bmiMessage;
+  
+
 
   void calcBMI() {
     bmi = widget.weight / (widget.insideHeight * widget.insideHeight);
+    bmi = double.parse(bmi.toStringAsFixed(1)); // Format to 1 decimal 
+  }
+
+  void changeStatus(){
+    if(bmi <= 17.5){
+      bmiStatus = "Low";
+      bmiMessage = "Your BMI is low, consider gaining some weight.";
+    }
+
+    else if(bmi >= 18 && bmi <=25){
+      bmiStatus = "Normal";
+      bmiMessage = "Your BMI is normal, you are healthy.";
+    }
+    else{
+      bmiStatus = "High";
+      bmiMessage = "Your BMI is high, consider losing some weight.";
+    }
   }
 
   //TODO, change the status of the BMI and the status message based on the actual BMI
@@ -33,6 +54,7 @@ class _BmiResultScreenState extends State<BmiResultScreen> {
   void initState() {
     super.initState();
     calcBMI();
+    changeStatus();
   }
 
   @override
@@ -65,7 +87,7 @@ class _BmiResultScreenState extends State<BmiResultScreen> {
             child: Column(
               children: [
                 Text(
-                  "Normal",
+                  "$bmiStatus",
                   style: TextStyle(
                     color: Colors.green,
                     fontWeight: FontWeight.w700,
@@ -82,7 +104,7 @@ class _BmiResultScreenState extends State<BmiResultScreen> {
                 ),
                 Gap(35),
                 Text(
-                  "You have a normal BMI, congrats!",
+                  "$bmiMessage",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.grey.shade600),
                 ),

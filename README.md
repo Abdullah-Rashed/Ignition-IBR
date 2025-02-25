@@ -1,4 +1,4 @@
-# ignition
+# fluttercourse
 
 A new Flutter project.
 
