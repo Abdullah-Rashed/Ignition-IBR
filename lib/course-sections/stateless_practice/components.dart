@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 //? STATEFUL vs STATELESS
 
 class ComponentsScreen extends StatelessWidget {
+  const ComponentsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -20,17 +20,17 @@ class BioContainer extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 20),
         decoration: BoxDecoration(
-          color: Colors.grey.shade200,
+          color: Color(0xFF323144),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Column(
           children: [
             Text(
-              "$metricName",
+              metricName,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
-                color: Colors.grey.shade500,
+                color: Colors.white,
               ),
             ),
             Gap(4),
@@ -38,7 +38,7 @@ class BioContainer extends StatelessWidget {
               "$matricValue",
               style: TextStyle(
                 fontSize: 40,
-                fontWeight: FontWeight.w600,
+                color: Colors.white,
               ),
             ),
             Gap(20),
@@ -48,14 +48,14 @@ class BioContainer extends StatelessWidget {
                 GestureDetector(
                   onTap: decrementFn,
                   child: CircleAvatar(
-                    backgroundColor: Colors.grey.shade100,
+                    backgroundColor: Colors.grey,
                     child: Icon(Icons.remove),
                   ),
                 ),
                 GestureDetector(
                   onTap: incrementFn,
                   child: CircleAvatar(
-                    backgroundColor: Colors.grey.shade100,
+                    backgroundColor: Colors.grey,
                     child: Icon(Icons.add),
                   ),
                 ),

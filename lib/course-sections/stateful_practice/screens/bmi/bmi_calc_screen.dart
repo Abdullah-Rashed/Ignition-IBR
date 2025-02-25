@@ -33,9 +33,18 @@ class _BmiCalcScreenState extends State<BmiCalcScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF1A2037),
       appBar: AppBar(
+        backgroundColor: Color(0xFF1A2037),
         centerTitle: true,
-        title: Text("BMI Calculator"),
+        title: const Text(
+          'BMI Calculator',
+        ),
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+        ),
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -70,7 +79,7 @@ class _BmiCalcScreenState extends State<BmiCalcScreen> {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 12, vertical: 20),
             decoration: BoxDecoration(
-              color: Colors.grey.shade200,
+              color: Color(0xFF323144),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Column(
@@ -80,7 +89,7 @@ class _BmiCalcScreenState extends State<BmiCalcScreen> {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
-                    color: Colors.grey.shade500,
+                    color: Colors.white,
                   ),
                 ),
                 Gap(4),
@@ -88,7 +97,8 @@ class _BmiCalcScreenState extends State<BmiCalcScreen> {
                   "${height.toInt()}cm",
                   style: TextStyle(
                     fontSize: 40,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
                 Gap(4),
@@ -96,12 +106,12 @@ class _BmiCalcScreenState extends State<BmiCalcScreen> {
                   min: 0,
                   max: 400,
                   value: height,
+                  thumbColor: Colors.pink,
+                  activeColor: Colors.pink,
                   onChanged: (value) {
                     setState(() {
                       height = value;
                     });
-                    print("HEIGHT ================== $height");
-                    print("VALUE ================== $value");
                   },
                 ),
               ],
@@ -143,18 +153,11 @@ class _BmiCalcScreenState extends State<BmiCalcScreen> {
           ),
         ],
       ),
-
-      //? CONTEXT is where YOU are.
-      //? moving forward = push;
-      //? moving back = pop;
-      //? moving forward and removing ALL previous screens = pushReplacement;
       bottomNavigationBar: SizedBox(
         height: 80,
         child: FilledButton(
           onPressed: () {
             heightInMeters = height / 100;
-            print("HEIHGT IN METERS === $heightInMeters ");
-
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => BmiResultScreen(
@@ -164,18 +167,20 @@ class _BmiCalcScreenState extends State<BmiCalcScreen> {
               ),
             );
           },
+          style: ButtonStyle(
+            backgroundColor: WidgetStatePropertyAll(Colors.pink),
+
+            shape: WidgetStatePropertyAll(
+              ContinuousRectangleBorder(
+                borderRadius: BorderRadius.only(),
+              ),
+            ),
+          ),
           child: Text(
             "Calculate",
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 24,
-            ),
-          ),
-          style: ButtonStyle(
-            shape: WidgetStatePropertyAll(
-              ContinuousRectangleBorder(
-                borderRadius: BorderRadius.only(),
-              ),
             ),
           ),
         ),

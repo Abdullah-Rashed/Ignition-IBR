@@ -22,23 +22,22 @@ class GenderContainer extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: isSelected == true
-                ? Colors.grey.shade400
-                : Colors.grey.shade200,
-            borderRadius: BorderRadius.circular(8),
+            color: isSelected == true ? Colors.pink : Color(0xFF323144),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
             children: [
               Icon(
                 icon,
                 size: 120,
+                color: Colors.white,
               ),
               Text(
                 gender,
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                ),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white),
               ),
               Gap(12),
             ],
